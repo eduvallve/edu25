@@ -1,0 +1,31 @@
+/* Scroll home icon */
+
+.icon__scroll-down {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.icon__scroll-down img {
+    width: 30px;
+    animation: bounce ease-in-out 1.5s infinite;
+    cursor: pointer;
+}
+
+
+/* Animations */
+
+@keyframes bounce {
+    from {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}

@@ -1,0 +1,41 @@
+/* Default carousel styles */
+
+.elementor .mc__swiper__card {
+    &__img {
+        border-radius: 4px;
+        overflow: hidden;
+        aspect-ratio: 3 / 2;
+
+        @media screen and (768px <= width < 1024px) {
+            aspect-ratio: 1;
+        }
+    }
+
+    &__asset {
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        margin: auto;
+    }
+}
+
+.mc__carousel {
+    .elementor & {
+        margin: 0;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        height: 16px;
+
+        &:after {
+            font-size: 16px;
+            color: var(--e-global-color-text);
+        }
+    }
+
+    .swiper-pagination {
+        color: var( --e-global-color-text );
+    }
+}

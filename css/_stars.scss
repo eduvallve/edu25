@@ -1,0 +1,36 @@
+/* Night Sky bg container */
+
+div.container__night-sky {
+    overflow: hidden;
+}
+
+div.container__night-sky p {
+    margin: 0;
+}
+
+.container__night-sky canvas.nightSky {
+    width: 120vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: circle infinite 90s linear;
+    pointer-events: none;
+    mask-image: radial-gradient(black, transparent);
+    -webkit-mask-image: radial-gradient(black, transparent);
+}
+
+.container__night-sky::after {
+    @include mountains();
+}
+
+/* Animations */
+@keyframes circle {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

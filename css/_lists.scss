@@ -1,0 +1,8 @@
+/* Ordered list adjustments */
+*::marker {
+    color: var( --e-global-color-accent );
+}
+
+ol {
+    list-style-type: decimal-leading-zero;
+}

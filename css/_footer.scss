@@ -1,0 +1,17 @@
+/* Footer */
+
+.home .site-footer::before {
+    @include mountains();
+    bottom: unset;
+    top: -30px;
+}
+
+.site-footer {
+    .custom-logo {
+        margin: auto;
+    }
+
+    .footer-inner {
+        row-gap: 16px;
+    }
+}

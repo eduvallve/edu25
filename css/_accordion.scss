@@ -1,0 +1,10 @@
+/* Custom Accordion */
+
+.custom__accordion.elementor-widget-n-accordion .e-n-accordion-item-title {
+	border-width: 0 0 1px 0;
+	border-color: rgba($color: #fff, $alpha: 0.5);
+
+    small {
+        color: var( --e-global-color-accent );
+    }
+}

@@ -1,0 +1,70 @@
+/* hearts */
+
+.heart {
+    filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.1450980392));
+}
+
+.heart__motion-graphics {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    animation: zigzag ease-in-out 3s infinite;
+}
+
+.heart__motion-graphics.heart-doubled {
+    transform: translate(-50%, -50%);
+    mix-blend-mode: lighten;
+    z-index: 2;
+    animation: zagzig ease-in-out 3s infinite;
+}
+
+.heart__motion-graphics.heart-doubled.heart-back {
+    z-index: 0;
+    mix-blend-mode: normal;
+}
+
+.animation__motion-graphics {
+    position: relative;
+    height: 50px;
+}
+
+.blend-screen {
+    mix-blend-mode: plus-lighter;
+}
+
+/* Animations */
+@keyframes zigzag {
+    0% {
+        transform: translate(-50%, -50%);
+        filter: blur(0);
+    }
+
+    50% {
+        transform: translate(-65%, -35%);
+        filter: blur(2px);
+    }
+
+    100% {
+        filter: blur(0);
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes zagzig {
+    0% {
+        transform: translate(-50%, -50%);
+        filter: blur(0);
+    }
+
+    50% {
+        transform: translate(-45%, -55%);
+        filter: blur(2px);
+    }
+
+    100% {
+        filter: blur(0);
+        transform: translate(-50%, -50%);
+    }
+}

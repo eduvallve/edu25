@@ -1,0 +1,44 @@
+/* Animate elements container -- hide elements on publish mode and if they're not */
+
+.word {
+    font-style: italic;
+    color: var( --e-global-color-secondary );
+    font-family: var( --e-global-typography-secondary-font-family );
+}
+
+.container__animate--fade-up .word:not(.active) {
+    display: none;
+}
+
+.container__animate--fade-up .word.active {
+    animation: animatefadeUp ease-in-out 3s;
+}
+
+/* Animations */
+
+@keyframes animatefadeUp {
+    0% {
+        transform: translateY(0.5em);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-0.5em);
+        opacity: 0;
+    }
+}

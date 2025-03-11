@@ -1,0 +1,22 @@
+/* Page/post tags */
+
+.post-tags {
+    display: none;
+}
+
+.project__tags {
+    font-size: 12px;
+    width: calc(100% - 48px);
+
+    a:not(:last-child)::after {
+        content: ', ';
+    }
+}
+
+/* Tag page */
+
+body.tag {
+    .page-content {
+        @include styleTagsAndCategoriesPages;
+    }
+}

@@ -1,0 +1,18 @@
+/* Page/post tags */
+
+.project__categories {
+    font-size: 12px;
+    width: calc(100% - 48px);
+
+    a:not(:last-child)::after {
+        content: ', ';
+    }
+}
+
+/* Caregory page */
+
+body.category {
+    .page-content {
+        @include styleTagsAndCategoriesPages;
+    }
+}

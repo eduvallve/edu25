@@ -1,0 +1,38 @@
+/* Adjustments for portfolio pages (child pages of '.parent-pageid-100') */
+
+.parent-pageid-100 .page-content > .elementor > .elementor-element {
+    @media screen and (width < 767px) {
+        .e-con-inner .elementor-element:first-child {
+            width: 600px;
+            margin: auto;
+        }
+    }
+
+    @media screen and (width >= 768px) {
+        &:first-child .elementor-widget-image {
+            left: -32px;
+        }
+
+        &:nth-child(even) .e-con-inner {
+            flex-direction: row-reverse;
+
+            .elementor-element,
+            .elementor-heading-title {
+                color: var( --e-global-color-1f489eb );
+            }
+
+            .elementor-button:not(:hover) {
+                background-color: var( --e-global-color-1f489eb );
+                color: var( --e-global-color-secondary );
+
+                path {
+                    fill: var( --e-global-color-secondary );
+                }
+            }
+        }
+    }
+
+    small {
+        color: var( --e-global-color-accent );
+    }
+}

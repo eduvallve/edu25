@@ -1,0 +1,110 @@
+/* Mixins */
+@mixin mountains {
+    content: '';
+    background-image: url(/wp-content/uploads/2025/03/mountains.svg);
+    width: 100%;
+    height: 32px;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+@mixin showtitles() {
+    .portfolio__item {
+        &--img-asset {
+            opacity: 0.35;
+        }
+
+        &--content {
+            opacity: 1;
+            bottom: 50%;
+            transform: translate(-50%, 50%);
+        }
+    }
+}
+
+@mixin styleTagsAndCategoriesPages() {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media screen and (width >=768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+    }
+
+    article.post {
+        position: relative;
+        transition: .35s ease-in-out all;
+
+        & > a {
+            display: block;
+            aspect-ratio: 3 / 2;
+            height: 100%;
+            background-color: var( --e-global-color-primary );
+            overflow: hidden;
+
+            img {
+                opacity: 1;
+                transition: .35s ease-in-out all;
+                object-fit: cover;
+                min-height: 100%;
+            }
+        }
+
+        .entry-title {
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            text-align: center;
+            border: 1px solid var( --e-global-color-1f489eb );
+            border-radius: 2px;
+            max-width: calc(100% - 32px);
+            transform: translate(-50%, 0);
+            padding: 16px 24px;
+            transition: .35s ease-in-out all;
+            color: var( --e-global-color-1f489eb );
+            font-size: 20px;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            margin: 0;
+
+            a {
+                color: var( --e-global-color-1f489eb );
+            }
+        }
+
+        &:hover {
+            & > a img {
+                opacity: 0.35;
+            }
+
+            .entry-title {
+                opacity: 1;
+                bottom: 50%;
+                transform: translate(-50%, 50%);
+            }
+        }
+
+        p {
+            display: none;
+        }
+
+        @media screen and (width < 768px) {
+            & > a img {
+                opacity: 0.35;
+            }
+
+            .entry-title {
+                opacity: 1;
+                bottom: 50%;
+                transform: translate(-50%, 50%);
+            }
+        }
+    }
+}
