@@ -151,7 +151,6 @@ class AnimateFadeUp extends BasicComponent {
 
     createActiveLoop() {
         const elementList = this.el.querySelectorAll('.word');
-        console.log(elementList);
         this.addActiveClass(elementList[0]);
         let indexCount = 1;
 
